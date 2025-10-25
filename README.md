@@ -3,8 +3,11 @@
 A comprehensive full-stack MERN application that revolutionizes the way students study with AI-powered tools, intelligent quiz generation, interactive flashcards, performance analytics, and real-time AI assistance.
 
 ![Tech Stack](https://img.shields.io/badge/Stack-MERN-green)
+
 ![AI](https://img.shields.io/badge/AI-Google%20Gemini-blue)
+
 ![Real-time](https://img.shields.io/badge/Real--time-Socket.io-orange)
+
 ![PDF](https://img.shields.io/badge/PDF-Parsing-red)
 
 ## 🌟 Complete Feature Set
