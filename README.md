@@ -3,11 +3,8 @@
 A comprehensive full-stack MERN application that revolutionizes the way students study with AI-powered tools, intelligent quiz generation, interactive flashcards, performance analytics, and real-time AI assistance.
 
 ![Tech Stack](https://img.shields.io/badge/Stack-MERN-green)
-
 ![AI](https://img.shields.io/badge/AI-Google%20Gemini-blue)
-
 ![Real-time](https://img.shields.io/badge/Real--time-Socket.io-orange)
-
 ![PDF](https://img.shields.io/badge/PDF-Parsing-red)
 
 ## 🌟 Complete Feature Set
@@ -281,100 +278,12 @@ A comprehensive full-stack MERN application that revolutionizes the way students
 
 #### Database Architecture
 - **MongoDB** with Mongoose ODM
-- Six main collections with comprehensive data models:
-
-##### 1. 👤 **Users Collection**
-User authentication and account management:
-- **Email** (unique, lowercase, validated)
-- **Password** (bcrypt hashed, min 6 characters)
-- **Name** (required)
-- **Email Verification**:
-  - `isVerified` status (boolean)
-  - `verificationToken` (32-byte hex, 24hr expiry)
-  - `verificationTokenExpiry` (timestamp)
-- **Password Reset**:
-  - `resetPasswordToken` (32-byte hex, 1hr expiry)
-  - `resetPasswordExpiry` (timestamp)
-- **Timestamps**: `createdAt`, `lastLogin`
-- **Methods**: `comparePassword()`, `generateVerificationToken()`, `generateResetToken()`
-
-##### 2. 📚 **Sources Collection**
-Uploaded study materials with full-text indexing:
-- **Filename** (original file name)
-- **Subject** (categorization)
-- **File Type** (pdf, text, doc, other)
-- **Content** (extracted text, searchable)
-- **File Data** (Buffer - binary file storage)
-- **File Size** (bytes)
-- **MIME Type**
-- **Upload Date**
-- **Tags** (array for categorization)
-- **Summary** (AI-generated)
-- **Indexes**: Subject + uploadDate, Full-text search on filename & content
-
-##### 3. 💬 **Chats Collection**
-AI conversation history with session tracking:
-- **Session ID** (unique identifier)
-- **Messages Array** (subdocuments):
-  - `role` (user/assistant)
-  - `content` (message text)
-  - `timestamp`
-- **Subject** (topic/context)
-- **Last Activity** (timestamp)
-- **Created At**
-- **Methods**: `addMessage()` - auto-updates lastActivity
-
-##### 4. 🎴 **Flashcards Collection**
-Interactive study card sets:
-- **Title** (flashcard set name)
-- **Subject**
-- **Source ID** (reference to Sources collection)
-- **Cards Array** (subdocuments):
-  - `front` (question/term)
-  - `back` (answer/definition)
-  - `mastered` (boolean tracking)
-- **Total Cards** (count)
-- **Mastered Count** (progress tracking)
-- **Created At**
-- **Methods**: `updateMasteredCount()`
-
-##### 5. 📝 **Quizzes Collection**
-Generated quizzes with automatic scoring:
-- **Title** (quiz name)
-- **Subject**
-- **Source ID** (reference to Sources collection)
-- **Questions Array** (subdocuments):
-  - `question` (text)
-  - `options` (array of 4 choices)
-  - `correctAnswer` (string)
-  - `selectedAnswer` (user's choice)
-  - `explanation` (AI-generated)
-- **Total Questions**
-- **Score** (auto-calculated)
-- **Percentage** (auto-calculated)
-- **Completion Status** (`isCompleted`)
-- **Completed At**
-- **Pre-save Hook**: Auto-calculates score and percentage on completion
-
-##### 6. ⏱️ **Timelines Collection**
-Chronological event extraction:
-- **Title** (timeline name)
-- **Subject**
-- **Source ID** (reference to Sources collection)
-- **Events Array** (subdocuments):
-  - `date` (string representation)
-  - `title` (event name)
-  - `description` (details)
-  - `category` (classification)
-- **Total Events** (count)
-- **Created At**
-
-##### Database Features:
-- **Relationships**: ObjectId references link Flashcards, Quizzes, and Timelines to Sources
-- **Automatic Timestamps**: `createdAt` and `updatedAt` on all collections
-- **Validation**: Schema-level validation with custom error messages
-- **Indexes**: Optimized queries with compound and text indexes
-- **Middleware**: Pre-save hooks for password hashing and score calculation
+- Five main schemas:
+  1. **Source**: File storage with content extraction
+  2. **Quiz**: Questions with subdocuments, pre-save hooks
+  3. **Chat**: Session-based message history
+  4. **Flashcard**: Card sets with front/back content
+  5. **Timeline**: Events with dates and descriptions
 
 #### API Design
 - RESTful API architecture
