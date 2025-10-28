@@ -74,15 +74,55 @@ const Login = ({ onLogin }) => {
 
   return (
     <div className="min-h-screen bg-dark-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">🎓 First Rank Raju</h1>
-          <p className="text-gray-400">Sign in to your account</p>
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Left Side - Website Info */}
+        <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 rounded-lg p-8 border border-blue-500/30 shadow-2xl">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">🎓 First Rank Raju</h1>
+            <p className="text-xl text-blue-100 mb-6">Your AI-Powered Study Companion</p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">🤖</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">AI Chat Assistant</h3>
+                <p className="text-blue-100 text-sm">Get instant help with your studies using our advanced AI that understands your uploaded materials.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">📝</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Smart Quiz Generation</h3>
+                <p className="text-blue-100 text-sm">Generate custom quizzes from your study materials with detailed explanations.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">🎴</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Interactive Flashcards</h3>
+                <p className="text-blue-100 text-sm">Create and study with AI-generated flashcards that adapt to your learning pace.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">📊</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Performance Analytics</h3>
+                <p className="text-blue-100 text-sm">Track your progress and identify areas for improvement with detailed statistics.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Login Form */}
+        {/* Right Side - Login Form */}
         <div className="bg-dark-200 rounded-lg p-8 border border-dark-300">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">Welcome Back!</h2>
+            <p className="text-gray-400">Sign in to your account</p>
+          </div>
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email */}
             <div>
@@ -197,11 +237,6 @@ const Login = ({ onLogin }) => {
             </p>
           </div>
         </div>
-
-        {/* Footer */}
-        <p className="text-center text-gray-500 text-sm mt-6">
-          Your AI-powered study companion
-        </p>
       </div>
     </div>
   );

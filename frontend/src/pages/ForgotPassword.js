@@ -31,15 +31,55 @@ const ForgotPassword = () => {
 
   return (
     <div className="min-h-screen bg-dark-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">🔐 Forgot Password</h1>
-          <p className="text-gray-400">Enter your email to reset your password</p>
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Left Side - Website Info */}
+        <div className="bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 rounded-lg p-8 border border-orange-500/30 shadow-2xl">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">🎓 First Rank Raju</h1>
+            <p className="text-xl text-orange-100 mb-6">Secure Account Recovery</p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">🔒</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Secure Authentication</h3>
+                <p className="text-orange-100 text-sm">Your account is protected with industry-standard security measures and encrypted data.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">📧</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Email Verification</h3>
+                <p className="text-orange-100 text-sm">We'll send a secure reset link to your registered email address for account recovery.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">⚡</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Quick Recovery</h3>
+                <p className="text-orange-100 text-sm">Get back to your studies quickly with our streamlined password reset process.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">🛡️</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Data Protection</h3>
+                <p className="text-orange-100 text-sm">Your study materials and progress remain safe and secure during the recovery process.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Form */}
+        {/* Right Side - Reset Form */}
         <div className="bg-dark-200 rounded-lg p-8 border border-dark-300">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">🔐 Reset Password</h2>
+            <p className="text-gray-400">Enter your email to reset your password</p>
+          </div>
           {success ? (
             <div className="text-center">
               <svg className="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

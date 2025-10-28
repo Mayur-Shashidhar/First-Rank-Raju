@@ -86,15 +86,55 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-dark-100 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">🎓 First Rank Raju</h1>
-          <p className="text-gray-400">Create your account</p>
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* Left Side - Website Info */}
+        <div className="bg-gradient-to-br from-green-600 via-emerald-700 to-teal-800 rounded-lg p-8 border border-green-500/30 shadow-2xl">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">🎓 First Rank Raju</h1>
+            <p className="text-xl text-green-100 mb-6">Transform Your Study Experience</p>
+          </div>
+          
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">📚</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Upload Study Materials</h3>
+                <p className="text-green-100 text-sm">Upload PDFs, documents, and notes. Our AI extracts and organizes content for easy access.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">⏱️</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Timeline Generation</h3>
+                <p className="text-green-100 text-sm">Automatically create chronological timelines from historical events and important dates.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">💡</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Smart Summaries</h3>
+                <p className="text-green-100 text-sm">Generate concise summaries of your study materials in different lengths and formats.</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4">
+              <div className="text-yellow-300 text-2xl">🎯</div>
+              <div>
+                <h3 className="text-white font-semibold mb-2">Personalized Learning</h3>
+                <p className="text-green-100 text-sm">AI adapts to your learning style and provides personalized study recommendations.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Signup Form */}
+        {/* Right Side - Signup Form */}
         <div className="bg-dark-200 rounded-lg p-8 border border-dark-300">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">Join First Rank Raju</h2>
+            <p className="text-gray-400">Create your account</p>
+          </div>
           {success ? (
             <div className="text-center">
               <div className="bg-green-900/30 border border-green-700 text-green-400 px-4 py-4 rounded-lg mb-4">
@@ -249,11 +289,6 @@ const Signup = () => {
             </div>
           )}
         </div>
-
-        {/* Footer */}
-        <p className="text-center text-gray-500 text-sm mt-6">
-          Your AI-powered study companion
-        </p>
       </div>
     </div>
   );
