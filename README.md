@@ -7,6 +7,11 @@ A comprehensive full-stack MERN application that revolutionizes the way students
 ![Real-time](https://img.shields.io/badge/Real--time-Socket.io-orange)
 ![PDF](https://img.shields.io/badge/PDF-Parsing-red)
 
+## 📖 Course Information
+
+- Course Name : Web Technologies
+- Course Code : UE24CS242A
+
 ## 🌟 Complete Feature Set
 
 ### 📚 Study Material Management
